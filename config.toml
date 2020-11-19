@@ -1,0 +1,17 @@
+title = "Splitify | Project Pitch"
+languageCode = "en-au"
+relativeURLs = true
+theme = "reveal-hugo"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true
+
+[params.reveal_hugo]
+custom_theme = "stylesheets/custom-theme.scss"
+custom_theme_compile = true
+slide_number = true

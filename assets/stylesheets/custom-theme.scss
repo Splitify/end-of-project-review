@@ -1,0 +1,67 @@
+@import '../reveal-js/css/theme/template/mixins';
+@import '../reveal-js/css/theme/template/settings';
+
+@import './splitify-bg-gradient.scss';
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,700,300italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,700,300italic,700italic);
+
+
+$backgroundColor: #2b2b2b;
+$mainColor: #eee;
+$headingColor: #eee;
+$linkColor: white;
+$linkColorHover: darken($linkColor, 30%);
+// $selectionBackgroundColor: #ff5e99;
+$selectionColor: #fff;
+
+$mainFont: 'Open Sans', sans-serif;
+$headingFont: 'Montserrat', sans-serif;
+$codeFont: monospace;
+
+$mainFontSize: 40px;
+$heading1Size: 3.77em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+$heading4Size: 1em;
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingTextShadow: none;
+$headingFontWeight: normal;
+$heading1TextShadow: $headingTextShadow;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  @include splitifyGradientBG(60s);
+}
+
+@import '../reveal-js/css/theme/template/theme';
+
+body:after {
+  content: ' ';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 250px;
+  margin: 15px;
+  //   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+.reveal {
+  section img {
+    border: 0;
+    background: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,41 @@
+@mixin splitifyGradientBG($duration: 20s) {
+  background: linear-gradient(146deg, #4dc088, #699fd5);
+  background-size: 10000% 10000%;
+  -webkit-animation: GradientAnim $duration ease infinite;
+  -moz-animation: GradientAnim $duration ease infinite;
+  animation: GradientAnim $duration ease infinite;
+}
+
+@-webkit-keyframes GradientAnim {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+@-moz-keyframes GradientAnim {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+@keyframes GradientAnim {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
