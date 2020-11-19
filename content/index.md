@@ -1,110 +1,99 @@
 ---
-title: "Splitify | Initial Project Pitch"
+title: "Splitify | End of Project Sprint Review"
 layout: "bundle"
 outputs: ["Reveal"]
 ---
 
 ![](https://splitify.github.io/branding/textmark/textmark@150.png)
 
----
-
-## Splitify
-
-Your last Spotify playlist management tool  
-<img src="https://splitify.github.io/branding/logo/logo@72.png" height="130px" />  
-Splitify is a web application designed to simplify the process of breaking down large Spotify playlists into smaller categorised and curated playlists.
-
-It provides an intuitive user-interface allowing users to split and order tracks in playlists all from the convenience of a single application.
+End of Project Sprint Review
 
 ---
 
-## Features
+### Advertised Features
 
-{{%fragment%}}
-* Splitting of large playlists by track information
-{{%/fragment%}}
-
-{{%fragment%}}
-* Drag 'n drop inter-playlist track management
-{{%/fragment%}}
-
-{{%fragment%}}
-* Tracks can be grouped for easier bulk edits
-{{%/fragment%}}
-
-{{%fragment%}}
-* Sorting and filtering of playlists
-{{%/fragment%}}
+* Splitting of large playlists by track information ✓
+* Drag 'n drop inter-playlist track management ✓
+* Tracks can be grouped for easier bulk edits ✓
+* Sorting and filtering of playlists ✓
 
 ---
 
-## Target Audience
+### Additional Features
 
-Music enthusiasts, musicians, curators, DJs, you!
-
-* Spotify users who have large playlists that they wish to split into smaller, more manageable playlists.
-
-* Listeners who wish to make changes to several playlists at a time
+* Track information (track feature graphical visualisation)
+* Track audio preview (for available tracks)
+* Unused genre hint
 
 ---
 
-### Competitor Advantage
+### Timeline
 
 {{% section %}}
 
-* [remixr.xyz](https://github.com/rtkg12/remixr)
-  * Cannot manage previous playlists
-* [Organize Your Music](http://organizeyourmusic.playlistmachinery.com)
-  * Difficult, bloated interface
-* [Dubolt](https://dubolt.com/)
-  * Only for discovery of new tracks
-* [Spotify](https://spotify.com)
-  * Minimal functionality to manage multiple playlists
+|Projected|Actual|
+|:---:|:---:|
+|![](timeline_projected.png)|![](timeline_current.png)|
 
 ---
 
-<s>Difficult, bloated interface</s>  
-<s>Cannot manage previous playlists</s>  
-<s>Only for discovery of new tracks</s>
+### Release Roadmap
 
-### Splitify?
+* Beta (Week 6) - Application that allows the user to log in, split, sort and filter playlists and sync it back to their account. **Delayed to Week 7**
 
-✅ Manage multiple playlists  
-✅ Simple and interactive  
-✅ Add new tracks  
-✅ More!  
+* Release (Week 8) - Application that allows the user to log in, split, sort, filter, and group tracks, with account synchronisation. **Delayed to Week 9**
 
 {{% /section %}}
 
 ---
 
-## Technology Stack
-
-|React|Spotify API|
-|:---:|:---------:|
-|<img src="react.svg" height="200px"/>|<img src="spotify.svg" height="200px"/>|
-
----
-
-### Project Management
-
-![](backlog-20201002.0029.png)
-
-[Pivotal Tracker: Splitify](https://www.pivotaltracker.com/n/projects/2467796)  
-[GitHub: github.com/splitify](https://github.com/Splitify)
-
-<!-- Like and subscribe, hit that bell icon 🔔 -->
-
----
-
-## Release Roadmap
+### Development Incidents
 
 {{% section %}}
 
-![](https://docs.google.com/drawings/d/e/2PACX-1vSxGJAJoLI4ftlwK0Xs8SHumO1RCcQiBEKqON7SLBave_y41EWY74qJufj0FXLA47DM1SBQF8WDkbot/pub?w=1440&amp;h=810)
+#### Spotify API Completeness
+
+Spotify's API documentation stated that genre data was available for each track.
+However, no genre data was attached to the track data responses. Consequently genre data would have to be sourced from the artist's genre information - which may include genres incorrect to a specific track.
+
+Instead, the Last.fm API was used to source genre information, specific to each track.
 
 ---
 
-* **Beta** - Application that allows the user to log in, split, sort and filter playlists and sync it back to their account
+### User Feedback
 
-* **Major Version 1** - Application that allows the user to log in, split, sort, filter, and group tracks, with account synchronisation. User changes are kept between session
+Received feedback from a beta tester, and other members of the tutorial group who suggested making changes to the functionality of the application, such that it would be more useful and straightforward to an actual project user.
+
+---
+
+#### Time Allocation for Grouping
+
+The last sprint required a change in the backend structure to better integrate the other features of the web application. Unfortunately this created a critical path which we could not execute on.
+
+<!-- 
+While not strictly a blocker, grouping was started late as it reused code from deleting. The deleting feature ran over time due to our backend architecture changing and needing to redo deleting after running into problems.  -->
+
+Furthermore, the points for grouping were poorly estimated as we did not take into account how many other components grouping would interact with and the subsequent time that would be needed to handle all edge cases.
+
+{{% /section %}}
+
+---
+
+### What Went Well
+
+* Our epics were mostly satisfied.
+* Pivotal gave us a guide on how much work should be done per week
+* Pull Request templates and deploy previews
+* Got user feedback
+
+---
+
+### What went "poorly"
+
+* Spotify lacking updated documentation - see genre data above (Last.fm)
+* See grouping paragraph above
+* We didn’t use the rejection feature on pivotal
+
+* Pivotal software bugs
+  * Iteration planning was execute automatically even though it was disabled
+  * Had to apply a manual velocity override which would reset each time pivotal was reloaded
