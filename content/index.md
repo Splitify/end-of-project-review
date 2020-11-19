@@ -44,8 +44,8 @@ Furthermore, the points for grouping were poorly estimated as we did not take in
 
 ### What went poorly
 
-* Spotify lacking updated documentation - see genre data above (Last.fm)
-* See grouping paragraph above
+* Spotify lacking updated documentation - genre data (Last.fm)
+* Grouping
 * We didn’t use the rejection feature on pivotal
 
 * Pivotal software bugs
