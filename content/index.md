@@ -73,7 +73,8 @@ Received feedback from a beta tester, and other members of the tutorial group wh
 
 {{% section %}}
 
-### Advertised Features (Epic Stories)
+### Advertised Features
+##### (Epic Stories)
 
 * Splitting of large playlists by track information ✓
 * Spotify account integration ✓
@@ -83,7 +84,8 @@ Received feedback from a beta tester, and other members of the tutorial group wh
 
 ---
 
-### Additional Features (User Feedback)
+### Additional Features
+##### (User Feedback)
 
 * Select multiple playlists
 * Track list count and genre count
